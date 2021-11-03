@@ -31,7 +31,10 @@ PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += \
 # Permissions
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.telephony.ims.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/android.hardware.telephony.ims.xml \
-    frameworks/native/data/etc/handheld_core_hardware.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/handheld_core_hardware.xml
+    frameworks/native/data/etc/handheld_core_hardware.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/handheld_core_hardware.xml \
+    $(LOCAL_PATH)/configs/priv-permissions-fix.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-fix.xml \
+    $(LOCAL_PATH)/configs/priv-permissions-fix.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-fix.xml \
+    $(LOCAL_PATH)/configs/privapp-permissions-fix-systemext.xml:$(TARGET_COPY_OUT_SYSTEM)/system_ext/etc/permissions/privapp-permissions-fix.xml \
 
 # A/B
 AB_OTA_UPDATER := true
